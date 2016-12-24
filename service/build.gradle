@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'maven-publish'
+
+mainClassName = 'com.lara.Main'
+
+project.ext {
+	artifactId = 'service'
+	}
+	
+repositories {
+	mavenCentral()
+	maven { url 'http://maven.jahia.org/maven2/'}
+}
+
+dependencies {
+
+	//spring
+	compile 'org.springframework:spring-orm:4.3.4.RELEASE'
+	compile 'org.springframework:spring-context-support:4.3.4.RELEASE'
+
+	//utility
+	compile 'commons-io:commons-io:2.5'
+	compile 'commons-lang:commons-lang:2.6'
+
+	//database
+	compile 'org.hibernate:hibernate-core:5.2.5.Final'
+	compile 'commons-dbcp:commons-dbcp:1.4'
+	compile 'com.oracle:ojdbc6:11.1.0.7.0'
+
+	//log
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    
+    testCompile 'junit:junit:4.12'
+}
