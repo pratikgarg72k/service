@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'maven-publish'
 
-mainClassName = 'com.lara.Main'
+mainClassName = 'com.lara.suezistar.Main'
 
 project.ext {
 	artifactId = 'service'
